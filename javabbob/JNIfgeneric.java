@@ -192,7 +192,7 @@ public class JNIfgeneric {
         }
 
         System.out.println("target=" + fgeneric.getFtarget());
-        System.out.println("doing some test evalations:");
+        System.out.println("doing some Test evalations:");
         for (int t = 0; t < 10; t++) {
             for (int i = 0; i < X.length; i++) {
                 X[i] = rand.nextDouble();

@@ -52,10 +52,11 @@ public class group62 implements ContestSubmission
         int evals = 0;
 
         // Initializing population
-        Population population = new Population(Var.POPULATION_SIZE).initialize();
+        Population population = new Population(Var.POPULATION_SIZE);
+
 
         // Initialize generitcAlgorithm
-        EvolutionAlgorithm evolutionAlgorithm = new EvolutionAlgorithm();
+        EvolutionAlgorithm evolutionAlgorithm = new EvolutionAlgorithm(population);
 
         // Run code until we run out of evalutions
         while(evals < evaluations_limit_) {
@@ -67,9 +68,9 @@ public class group62 implements ContestSubmission
                     // Apply crossover / mutation operators
                     // Check fitness of unknown fuction
 
-                    Mutant tempMutant = population.getMutants()[i];
+                    Mutant tempMutant = evolutionAlgorithm.population.getMutants()[i];
                     Double fitness = (double) evaluation_.evaluate(tempMutant.getValues());
-                    tempMutant.storeFitness(fitness);
+                    tempMutant.setFitness(fitness);
 
                     //System.out.println(evals);
 
@@ -79,7 +80,7 @@ public class group62 implements ContestSubmission
             }
 
             // Evolving current population
-            population = evolutionAlgorithm.evolve(population);
+            evolutionAlgorithm.evolve();
         }
 
 

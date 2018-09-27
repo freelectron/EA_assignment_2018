@@ -2,17 +2,17 @@ import java.util.Arrays;
 
 public class Population {
 
-    private Mutant[] mutants;
+    public Mutant[] mutants;
 
     public Population(int populationSize) {
         mutants = new Mutant[populationSize];
+        this.initialize();
     }
 
-    public Population initialize() {
+    public void initialize() {
         for (int i = 0; i < mutants.length; i++) {
-            mutants[i] = new Mutant(Var.NUMBER_OF_GENES).initialize();
+            mutants[i] = new Mutant(Var.NUMBER_OF_GENES);
         }
-        return this;
     }
 
     public Mutant[] getMutants() {
@@ -30,5 +30,6 @@ public class Population {
             return flag;
         });
     }
+
 
 }
