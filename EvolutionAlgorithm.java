@@ -8,6 +8,7 @@ public class EvolutionAlgorithm {
     public Population population;
 
     public EvolutionAlgorithm(Population population){
+
         this.population = population;
     }
 
