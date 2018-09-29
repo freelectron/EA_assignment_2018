@@ -18,6 +18,7 @@ public class EvolutionAlgorithm {
         parentSelection_nr1only();
 
         // Continue with RECOMBINATION
+        // yoyo ! 
 
 
         // Finish with MUTATION
