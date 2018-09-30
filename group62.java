@@ -70,9 +70,9 @@ public class group62 implements ContestSubmission
 
                     Mutant tempMutant = evolutionAlgorithm.population.getMutants()[i];
                     Double fitness = (double) evaluation_.evaluate(tempMutant.getValues());
-                    tempMutant.setFitness(fitness);
-
-                    //System.out.println(evals);
+                    tempMutant.setFitness(fitness) ;
+//                    System.out.println(Arrays.toString(tempMutant.getValues())) ;  /////////
+//                    System.out.println(evals);                                    ///////
 
                     evals++;
                     // Select survivors
@@ -81,6 +81,10 @@ public class group62 implements ContestSubmission
 
             // Evolving current population
             evolutionAlgorithm.evolve();
+
+//            if (evals >=19){
+//                break ;                        ////////////////////////
+//            }
         }
 
 
