@@ -35,7 +35,8 @@ public class EvolutionAlgorithm {
 
         // Finish with MUTATION
 
-        mutator.mutatePopulation_UMN(population);
+        // mutator.mutatePopulation_UMN(population);
+        mutator.mutatePopulation_CMN(population);
 //        mutatePopulation_stupid();
     }
 

@@ -11,6 +11,9 @@ public class Mutant {
     private double[] genes;
 
     private double[] standard_deviations;
+
+    private double[][] correlations;
+
     /*
     initializing genes array
      */
@@ -19,6 +22,7 @@ public class Mutant {
     public Mutant(int length) {
         genes = new double[length];
         standard_deviations = new double[length];
+        correlations = new double[length][length];
         this.initialize();
     }
     /*
@@ -29,6 +33,9 @@ public class Mutant {
         for (int i = 0; i < genes.length; i++) {
             genes[i] = (Math.random() * (Var.SEARCH_SPACE_MAX - Var.SEARCH_SPACE_MIN)) - Var.SEARCH_SPACE_MAX;
             standard_deviations[i] = 0;
+            for (int j=0; j <genes.length; j++){
+                correlations[i][j] = 0;
+            }
         }
     }
     /*
@@ -45,6 +52,9 @@ public class Mutant {
     public double[] getSDs() {
         return standard_deviations;
     }
+
+    public double[][] getCorrelations() { return correlations; }
+
 
     /*
     set statements
