@@ -6,11 +6,10 @@ import java.util.Random;
 public class EvolutionAlgorithm {
 
     public Population population;
-
     public Mutator mutator;
     public Selector selector;
     public Recombinator recombinator;
-
+    public boolean flip;
 
     public EvolutionAlgorithm(Population population){
 
@@ -18,6 +17,7 @@ public class EvolutionAlgorithm {
         this.mutator = new Mutator();
         this.selector = new Selector();
         this.recombinator = new Recombinator();
+        this.flip = true;
     }
 
     public void evolve() {
@@ -36,7 +36,12 @@ public class EvolutionAlgorithm {
         // Finish with MUTATION
 
         // mutator.mutatePopulation_UMN(population);
-        mutator.mutatePopulation_CMN(population);
+        if (flip == true){
+            mutator.mutatePopulation_UMN(population);
+            flip = false;
+        } else {
+            mutator.mutatePopulation_Momentum(population);
+        }
 //        mutatePopulation_stupid();
     }
 

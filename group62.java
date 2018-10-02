@@ -62,11 +62,11 @@ public class group62 implements ContestSubmission
         MutantStorage mutantStorage = new MutantStorage(evaluations_limit_);
 
         // Run code until we run out of evalutions
-        while(evals < evaluations_limit_) {
+        while(evals < 800) {
 
             // Calculate fitness of current generation
             for (int i = 0; i < Var.POPULATION_SIZE; i++) {
-                if (evals < evaluations_limit_) {
+                if (evals < 800) {
                     // Select parents
                     // Apply crossover / mutation operators
                     // Check fitness of unknown fuction

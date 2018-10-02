@@ -19,6 +19,46 @@ public class Mutator {
         }
     }
 
+    public void mutatePopulation_Momentum(Population population) {
+
+        Mutant[] mutants = population.getMutants();
+        for (int i = 0; i < mutants.length; i++) {
+            mutateMutantMomentum(mutants[i]);
+        }
+    }
+
+    private void mutateMutantMomentum(Mutant mutant) {
+               /*
+        initialize
+        */
+        Random r = new Random() ;
+        double[] genes = mutant.getValues();
+        double[] standard_deviations = mutant.getSDs();
+        double[] momentum = mutant.getMomentum();
+
+        /*
+        constants
+         */
+        double tau_1 = Var.TAU_1;
+        double tau_2 = Var.TAU_2;
+        double boundry = Var.BOUNDRY;
+        for (int i = 0; i < genes.length; i++) {
+            /*
+            mutate sigma's
+             */
+            momentum[i] = Var.TAU_MOMENTUM_MU * momentum[i] + r.nextGaussian() * Var.TAU_MOMENTUM_SIGMA*standard_deviations[i];
+            /*
+            mutate genes
+            */
+            genes[i] = genes[i] + standard_deviations[i] * r.nextGaussian() + momentum[i];
+        }
+        /*
+        save the new genes and standard_deviations
+        */
+        mutant.setValues(genes);
+        mutant.setSDs(standard_deviations);
+    }
+
 
     private void mutateMutant(Mutant mutant) {
         /*
