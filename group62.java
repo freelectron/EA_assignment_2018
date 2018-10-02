@@ -58,6 +58,9 @@ public class group62 implements ContestSubmission
         // Initialize generitcAlgorithm
         EvolutionAlgorithm evolutionAlgorithm = new EvolutionAlgorithm(population);
 
+        // Initialize storage
+        MutantStorage mutantStorage = new MutantStorage(evaluations_limit_);
+
         // Run code until we run out of evalutions
         while(evals < evaluations_limit_) {
 
@@ -71,6 +74,7 @@ public class group62 implements ContestSubmission
                     Mutant tempMutant = evolutionAlgorithm.population.getMutants()[i];
                     Double fitness = (double) evaluation_.evaluate(tempMutant.getValues());
                     tempMutant.setFitness(fitness) ;
+                    mutantStorage.store(tempMutant);
 //                    System.out.println(Arrays.toString(tempMutant.getValues())) ;  /////////
 //                    System.out.println(evals);                                    ///////
 
