@@ -1,35 +1,43 @@
+//import java.util.Arrays;
+
 import java.util.Arrays;
+import java.util.Random;
 
 public class EvolutionAlgorithm {
 
-    public Population evolve(Population population) {
+    public Population population;
 
-        return mutatePopulation(crossoverPopulation(population));
+    public Mutator mutator;
+    public Selector selector;
+    public Recombinator recombinator;
+
+
+    public EvolutionAlgorithm(Population population){
+
+        this.population = population;
+        this.mutator = new Mutator();
+        this.selector = new Selector();
+        this.recombinator = new Recombinator();
     }
 
-    public Population crossoverPopulation(Population population) {
-        return population;
-    }
+    public void evolve() {
 
-    public Population mutatePopulation(Population population) {
+        // Start with PARENT SELECTION
+//        selector.parentSelection_elitism(population, 20);
 
-        population.sortByFitness();
+        selector.parentSelection_nr1only(population);
+//        selector.parentSelection_rankBased_LR(population,2,10);
+//       parentSelection_elitism(20) ;
 
-        Population mutatedPopulation = new Population(Var.POPULATION_SIZE);
-        mutatedPopulation.initialize();
+        // Continue with RECOMBINATION
+ //       recombinator.crossoverPopulation_nPoint(population, 5);
+  //     crossoverPopulation_nPoint(5);
 
-        for (int i = 0; i < Var.POPULATION_SIZE; i++) {
+        // Finish with MUTATION
 
-            for (int j = 0; j < Var.NUMBER_OF_GENES; j++) {
-                mutatedPopulation.getMutants()[i].getValues()[j] = population.getMutants()[0].getValues()[j] + Var.MUTATION_RATE * (Math.random() - 0.5);
-
-            }
-
-
-
-        }
-
-        return mutatedPopulation;
+        // mutator.mutatePopulation_UMN(population);
+        mutator.mutatePopulation_CMN(population);
+//        mutatePopulation_stupid();
     }
 
 
