@@ -17,32 +17,45 @@ public class EvolutionAlgorithm {
         this.mutator = new Mutator();
         this.selector = new Selector();
         this.recombinator = new Recombinator();
-        this.flip = true;
     }
 
     public void evolve() {
 
         // Start with PARENT SELECTION
-//        selector.parentSelection_elitism(population, 20);
+        if (Var.SELECTOR == "parentSelection_elitism"){
+            selector.parentSelection_elitism(population, 20);
+        }
+        if (Var.SELECTOR == "parentSelection_rankBased_LR"){
+            selector.parentSelection_rankBased_LR(population, 2, 10);
+        }
+        if (Var.SELECTOR == "parentSelection_nr1only"){
+            selector.parentSelection_nr1only(population);
+        }
 
-        selector.parentSelection_nr1only(population);
-//        selector.parentSelection_rankBased_LR(population,2,10);
-//       parentSelection_elitism(20) ;
+
 
         // Continue with RECOMBINATION
- //       recombinator.crossoverPopulation_nPoint(population, 5);
-  //     crossoverPopulation_nPoint(5);
+        if (Var.RECOMBINATOR == "crossoverPopulation_nPoint"){
+            recombinator.crossoverPopulation_nPoint(population, 5);
+        }
+        if (Var.RECOMBINATOR == "crossoverPopulation_Arithmetic"){
+            recombinator.crossoverPopulation_Arithmetic(population);
+        }
+
+
+
 
         // Finish with MUTATION
-
-        // mutator.mutatePopulation_UMN(population);
-        if (flip == true){
+        if (Var.MUTATOR == "mutatePopulation_UMN"){
             mutator.mutatePopulation_UMN(population);
-            flip = false;
-        } else {
+        }
+        if (Var.MUTATOR == "mutatePopulation_CMN"){
+            mutator.mutatePopulation_CMN(population);
+        }
+        if (Var.MUTATOR == "mutatePopulation_Momentum"){
             mutator.mutatePopulation_Momentum(population);
         }
-//        mutatePopulation_stupid();
+
     }
 
 
