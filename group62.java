@@ -57,7 +57,7 @@ public class group62 implements ContestSubmission
 
         // Initialize generitcAlgorithm
         EvolutionAlgorithm evolutionAlgorithm = new EvolutionAlgorithm(population);
-        int n_islands = 1;
+        int n_islands = 50;
         Islands islands = new Islands(n_islands);
         Population[] populations = islands.getPopulations();
         // Initialize storage
