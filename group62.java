@@ -57,7 +57,9 @@ public class group62 implements ContestSubmission
 
         // Initialize generitcAlgorithm
         EvolutionAlgorithm evolutionAlgorithm = new EvolutionAlgorithm(population);
-
+        int n_islands = 1;
+        Islands islands = new Islands(n_islands);
+        Population[] populations = islands.getPopulations();
         // Initialize storage
         MutantStorage mutantStorage = new MutantStorage(evaluations_limit_);
 
@@ -65,26 +67,21 @@ public class group62 implements ContestSubmission
         while(evals < evaluations_limit_) {
 
             // Calculate fitness of current generation
-            for (int i = 0; i < Var.POPULATION_SIZE; i++) {
-                if (evals < evaluations_limit_) {
-                    // Select parents
-                    // Apply crossover / mutation operators
-                    // Check fitness of unknown fuction
-
-                    Mutant tempMutant = evolutionAlgorithm.population.getMutants()[i];
-                    Double fitness = (double) evaluation_.evaluate(tempMutant.getValues());
-                    tempMutant.setFitness(fitness) ;
-                    mutantStorage.store(tempMutant);
-//                    System.out.println(Arrays.toString(tempMutant.getValues())) ;  /////////
-//                    System.out.println(evals);                                    ///////
-
-                    evals++;
-                    // Select survivors
+            for (int i = 0; i < n_islands; i++) {
+                for (int j = 0; j < Var.POPULATION_SIZE; j++){
+                    if (evals < evaluations_limit_) {
+                        Mutant tempMutant = populations[i].getMutants()[j];
+                        Double fitness = (double) evaluation_.evaluate(tempMutant.getValues());
+                        tempMutant.setFitness(fitness);
+                        mutantStorage.store(tempMutant);
+                        evals++;
+                    }
                 }
             }
 
-            // Evolving current population
-            evolutionAlgorithm.evolve();
+            // Evolving all populations
+
+            islands.evolve();
 
 //            if (evals >=19){
 //                break ;                        ////////////////////////
