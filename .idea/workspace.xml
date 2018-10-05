@@ -2,22 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd734ee8-c631-48b0-832c-5bcb5d91c000" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cholesky.class" beforeDir="false" afterPath="$PROJECT_DIR$/Cholesky.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EvolutionAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/EvolutionAlgorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EvolutionAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/EvolutionAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mutant.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mutant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mutant.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mutant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MutantStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/MutantStorage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mutator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mutator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mutator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mutator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/Population.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recombinator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Recombinator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Selector.class" beforeDir="false" afterPath="$PROJECT_DIR$/Selector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Var.class" beforeDir="false" afterPath="$PROJECT_DIR$/Var.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Var.java" beforeDir="false" afterPath="$PROJECT_DIR$/Var.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/group62.class" beforeDir="false" afterPath="$PROJECT_DIR$/group62.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/group62.java" beforeDir="false" afterPath="$PROJECT_DIR$/group62.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EA_assignment_2018/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EA_assignment_2018/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EA_assignment_2018/submission.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EA_assignment_2018/submission.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EA_assignment_2018/tmp/data_f12/bbobexp_f12_DIM10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EA_assignment_2018/tmp/data_f12/bbobexp_f12_DIM10.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EA_assignment_2018/tmp/data_f12/bbobexp_f12_DIM10.tdat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EA_assignment_2018/tmp/data_f12/bbobexp_f12_DIM10.tdat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/submission.jar" beforeDir="false" afterPath="$PROJECT_DIR$/submission.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bbobexp_f17.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/data_f17/bbobexp_f17_DIM10.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/data_f17/bbobexp_f17_DIM10.tdat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/data_f12/bbobexp_f12_DIM10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/data_f12/bbobexp_f12_DIM10.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/data_f12/bbobexp_f12_DIM10.rdat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/data_f12/bbobexp_f12_DIM10.tdat" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/data_f12/bbobexp_f12_DIM10.tdat" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,26 +65,26 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-307337565">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EvolutionAlgorithm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/group62.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+            <state relative-caret-position="352">
+              <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,53 +93,53 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Selector.java">
+        <entry file="file://$PROJECT_DIR$/Parameter_vector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
+            <state relative-caret-position="30">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tuning.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1200">
+              <caret line="82" column="28" selection-start-line="82" selection-end-line="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Population.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EvolutionAlgorithm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mutant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
-              <folding>
-                <element signature="e#1008#1009#0" expanded="true" />
-                <element signature="e#1036#1037#0" expanded="true" />
-                <element signature="e#1070#1071#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1132#1133#0" expanded="true" />
-                <element signature="e#1174#1175#0" expanded="true" />
-                <element signature="e#1311#1312#0" expanded="true" />
-                <element signature="e#1342#1343#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MutantStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="78" column="48" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mutator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="48" column="104" selection-start-line="48" selection-start-column="104" selection-end-line="48" selection-end-column="104" />
-              <folding>
-                <element signature="method#mutateMutantCorrelated#0;class#Mutator#0" />
-                <element signature="e#1291#1336#0" />
               </folding>
             </state>
           </provider>
@@ -143,8 +148,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Var.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="-3">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#948#949#0" expanded="true" />
+                <element signature="e#1006#1007#0" expanded="true" />
+                <element signature="e#1039#1040#0" expanded="true" />
+                <element signature="e#1088#1089#0" expanded="true" />
+                <element signature="e#1116#1117#0" expanded="true" />
+                <element signature="e#1169#1170#0" expanded="true" />
+                <element signature="e#1201#1202#0" expanded="true" />
+                <element signature="e#1249#1250#0" expanded="true" />
+                <element signature="e#1276#1277#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,8 +205,8 @@
         <option value="$PROJECT_DIR$/Mutant.java" />
         <option value="$PROJECT_DIR$/Mutator.java" />
         <option value="$PROJECT_DIR$/Var.java" />
-        <option value="$PROJECT_DIR$/group62.java" />
         <option value="$PROJECT_DIR$/EvolutionAlgorithm.java" />
+        <option value="$PROJECT_DIR$/group62.java" />
       </list>
     </option>
   </component>
@@ -203,17 +220,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="EA_assignment_2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EA_assignment_2018" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EA_assignment_2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -221,10 +233,11 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538477896066" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538740418174" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -281,10 +294,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20436187" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28040057" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -298,7 +311,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.46861315" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.40240964" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
@@ -353,13 +366,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/javac -cp contest.jar group62.java Mutant.java" />
-    <entry file="file://$PROJECT_DIR$/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EvolutionAlgorithm.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -405,17 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Population.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-          <folding>
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -438,13 +433,6 @@
             <element signature="method#mutateMutantCorrelated#0;class#Mutator#0" />
             <element signature="e#1291#1336#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Var.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -475,23 +463,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Parameter_vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/group62.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+        <state relative-caret-position="352">
+          <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Var.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1276#1277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EvolutionAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        <state relative-caret-position="363">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Population.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tuning.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="82" column="28" selection-start-line="82" selection-end-line="83" />
         </state>
       </provider>
     </entry>
