@@ -5,9 +5,10 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Properties;
 
+
 public class group62 implements ContestSubmission
 {
-	Random rnd_;
+    Random rnd_;
 	ContestEvaluation evaluation_;
     private int evaluations_limit_;
 	
@@ -49,6 +50,8 @@ public class group62 implements ContestSubmission
 	{
 		// Run your algorithm here
 
+        Var var = new Var();
+
         int evals = 0;
 
         // Initializing population
@@ -60,27 +63,37 @@ public class group62 implements ContestSubmission
 
         // Initialize storage
         MutantStorage mutantStorage = new MutantStorage(evaluations_limit_);
+        boolean flip = true;
 
         // Run code until we run out of evalutions
-        while(evals < 800) {
+        while(evals < 10000) {
+
 
             // Calculate fitness of current generation
             for (int i = 0; i < Var.POPULATION_SIZE; i++) {
-                if (evals < 800) {
+                if (evals < 10000) {
                     // Select parents
                     // Apply crossover / mutation operators
                     // Check fitness of unknown fuction
 
                     Mutant tempMutant = evolutionAlgorithm.population.getMutants()[i];
                     Double fitness = (double) evaluation_.evaluate(tempMutant.getValues());
+
+                    if (fitness > 8 && flip) {
+                        System.out.println("Evaluations:" + evals);
+                        flip = false;
+                    }
+
                     tempMutant.setFitness(fitness) ;
                     mutantStorage.store(tempMutant);
 //                    System.out.println(Arrays.toString(tempMutant.getValues())) ;  /////////
-//                    System.out.println(evals);                                    ///////
-
                     evals++;
                     // Select survivors
                 }
+                evolutionAlgorithm.population.sortByFitness();
+                double best_fitness = evolutionAlgorithm.population.getMutants()[0].getFitness();
+
+                var.update(evals, best_fitness);
             }
 
             // Evolving current population

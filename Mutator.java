@@ -2,6 +2,12 @@ import java.util.Random;
 
 public class Mutator {
 
+    private Random r;
+
+    public Mutator() {
+        r = new Random();
+    }
+
 
     public void mutatePopulation_UMN(Population population) {
 
@@ -9,6 +15,7 @@ public class Mutator {
         for (int i = 0; i < mutants.length; i++) {
             mutateMutant(mutants[i]);
         }
+
     }
 
     public void mutatePopulation_CMN(Population population) {
@@ -28,10 +35,9 @@ public class Mutator {
     }
 
     private void mutateMutantMomentum(Mutant mutant) {
-               /*
+        /*
         initialize
         */
-        Random r = new Random() ;
         double[] genes = mutant.getValues();
         double[] standard_deviations = mutant.getSDs();
         double[] momentum = mutant.getMomentum();
@@ -39,24 +45,17 @@ public class Mutator {
         /*
         constants
          */
-        double tau_1 = Var.TAU_1;
-        double tau_2 = Var.TAU_2;
-        double boundry = Var.BOUNDRY;
         for (int i = 0; i < genes.length; i++) {
             /*
             mutate sigma's
              */
             momentum[i] = Var.TAU_MOMENTUM_MU * momentum[i] + r.nextGaussian() * Var.TAU_MOMENTUM_SIGMA*standard_deviations[i];
+
             /*
-            mutate genes
+            mutate genes, we assume standard devations stay the same
             */
             genes[i] = genes[i] + standard_deviations[i] * r.nextGaussian() + momentum[i];
         }
-        /*
-        save the new genes and standard_deviations
-        */
-        mutant.setValues(genes);
-        mutant.setSDs(standard_deviations);
     }
 
 
@@ -64,35 +63,47 @@ public class Mutator {
         /*
         initialize
         */
-        Random r = new Random() ;
         double[] genes = mutant.getValues();
         double[] standard_deviations = mutant.getSDs();
+        double[] momentum = mutant.getMomentum();
 
         /*
         constants
          */
-        double tau_1 = Var.TAU_1;
-        double tau_2 = Var.TAU_2;
         double boundry = Var.BOUNDRY;
+
+        double mutationRate = r.nextGaussian();
+
         for (int i = 0; i < genes.length; i++) {
             /*
+
             mutate sigma's
              */
-            standard_deviations[i] = standard_deviations[i] * Math.exp(tau_1 * r.nextGaussian() + tau_2 * r.nextGaussian());
 
-            if (standard_deviations[i] < boundry) {
+            double standard_deviations_old = standard_deviations[i];
+
+            standard_deviations[i] = standard_deviations[i] * Math.exp(Var.TAU_1 * mutationRate  + Var.TAU_2 * r.nextGaussian());
+
+            // momentum[i] = Var.TAU_MOMENTUM_MU * momentum[i] + r.nextGaussian() * Var.TAU_MOMENTUM_SIGMA*standard_deviations[i];
+
+            if (standard_deviations[i] < boundry ) {
                 standard_deviations[i] = boundry;
             }
+
             /*
             mutate genes
             */
-            genes[i] = genes[i] + standard_deviations[i] * r.nextGaussian();
+
+            double crazyAdd = 0;
+            double number = r.nextGaussian();
+            if (number > 0) {
+                crazyAdd = Var.CRAZY_ADD * standard_deviations[i];
+            } else {
+                crazyAdd = (-1)*Var.CRAZY_ADD*standard_deviations[i];
+            }
+
+            genes[i] = genes[i] + standard_deviations[i] * number + crazyAdd;
         }
-        /*
-        save the new genes and standard_deviations
-        */
-        mutant.setValues(genes);
-        mutant.setSDs(standard_deviations);
     }
 
     private void mutateMutantCorrelated(Mutant mutant){
