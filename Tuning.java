@@ -88,11 +88,15 @@ public class Tuning{
 				String[] cmd = {"sh","/home/cgnarendiran/Desktop/semeter1/evolutionary_computing/EA_assignment_2018/runb.sh"};
 				String result = com.executeCommand(cmd);
 				// String result = com.executeCommand("javac -cp contest.jar group62.java Var.java Mutant.java Population.java EvolutionAlgorithm.java Mutator.java Selector.java Recombinator.java MutantStorage.java Cholesky.java  &&  jar cmf MainClass.txt submission.jar group62.class Mutant.class Var.class Population.class EvolutionAlgorithm.class Mutator.class Selector.class Recombinator.class MutantStorage.class Cholesky.class  &&  java -jar testrun.jar -submission=group62 -evaluation=BentCigarFunction -seed=1");
-				
-				double performance = 0.0;
+				// Parse the result:
+				String delims = "[ \n]+";
+				String[] tokens = result.split("\\r?\\n")[0].split(delims);
+				double performance = Double.parseDouble(tokens[1]);
 				pv[i].score = pv[i].score + performance;
 			}
 			pv[i].score = pv[i].score/5;
+			System.out.println(pv[i].score);
+
 	
 		}
 		
