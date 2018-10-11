@@ -30,9 +30,9 @@ public class Selector {
         double sum = 0.0;
         for (int i = 0; i < mu; i++) {
             // fucked up implementation, coz the next line does not work for me (taken from the lecture slides)
-//            sample_probabilities[i] = ((2 - s) / 1.0 * mu) + (2 * i * (s - 1) / mu * (mu - 1));
-            sample_probabilities[mu-1-i] = ((2 - s) / 1.0 * mu) + (2 * i * (s - 1) / mu * (mu - 1));
+            sample_probabilities[i] = ((2 - s) / 1.0 * mu) + (2 * i * (s - 1) / mu * (mu - 1.0));
             sum += sample_probabilities[mu-1-i] ;
+//            System.out.println(sample_probabilities[i]) ;        //////////////// - needs to be deleted later
         }
         for (int i = 0; i < mu; i++) {
             // fucked up implementation cont.
@@ -57,9 +57,11 @@ public class Selector {
         }
     }
 
+
+
     public void parentSelection_elitism(Population population, int pp) {
         /*
-        select the most fittest parents for reco
+        select the most fittest parents for recombination
         @ pp = percentage to keep e.g. 20 30 40 etc
         */
         population.sortByFitness() ;

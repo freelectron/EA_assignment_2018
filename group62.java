@@ -64,6 +64,7 @@ public class group62 implements ContestSubmission
         // Run code until we run out of evalutions
         while(evals < evaluations_limit_) {
 
+            evolutionAlgorithm.evolve_before();;
             // Calculate fitness of current generation
             for (int i = 0; i < Var.POPULATION_SIZE; i++) {
                 if (evals < evaluations_limit_) {
@@ -71,12 +72,13 @@ public class group62 implements ContestSubmission
                     // Apply crossover / mutation operators
                     // Check fitness of unknown fuction
 
-                    Mutant tempMutant = evolutionAlgorithm.population.getMutants()[i];
+                    Mutant tempMutant = evolutionAlgorithm.populationBefore.getMutants()[i];
                     Double fitness = (double) evaluation_.evaluate(tempMutant.getValues());
                     tempMutant.setFitness(fitness) ;
                     mutantStorage.store(tempMutant);
 //                    System.out.println(Arrays.toString(tempMutant.getValues())) ;  /////////
 //                    System.out.println(evals);                                    ///////
+
 
                     evals++;
                     // Select survivors
@@ -84,13 +86,12 @@ public class group62 implements ContestSubmission
             }
 
             // Evolving current population
-            evolutionAlgorithm.evolve();
+            evolutionAlgorithm.evolveAfter();
 
 //            if (evals >=19){
 //                break ;                        ////////////////////////
 //            }
         }
-
 
 	}
 }

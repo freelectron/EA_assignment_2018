@@ -7,7 +7,7 @@ public class Var {
     public static final int SEARCH_SPACE_MAX = 5;
 
 
-    public static final int POPULATION_SIZE = 100;
+    public static final int POPULATION_SIZE = 20;
 
 
     public static final double MUTATION_RATE = 0.25;
