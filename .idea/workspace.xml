@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd734ee8-c631-48b0-832c-5bcb5d91c000" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cholesky.class" beforeDir="false" afterPath="$PROJECT_DIR$/Cholesky.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EvolutionAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/EvolutionAlgorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EvolutionAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/EvolutionAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mutant.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mutant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MutantStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/MutantStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mutator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Mutator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/Population.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recombinator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Recombinator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recombinator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recombinator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selector.class" beforeDir="false" afterPath="$PROJECT_DIR$/Selector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Selector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Var.class" beforeDir="false" afterPath="$PROJECT_DIR$/Var.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Var.java" beforeDir="false" afterPath="$PROJECT_DIR$/Var.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group62.class" beforeDir="false" afterPath="$PROJECT_DIR$/group62.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group62.java" beforeDir="false" afterPath="$PROJECT_DIR$/group62.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/submission.jar" beforeDir="false" afterPath="$PROJECT_DIR$/submission.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bbobexp_f17.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/data_f17/bbobexp_f17_DIM10.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/data_f17/bbobexp_f17_DIM10.tdat" beforeDir="false" />
-    </list>
+    <list default="true" id="dd734ee8-c631-48b0-832c-5bcb5d91c000" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +14,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/EvolutionAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="53" column="60" lean-forward="true" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
+            <state relative-caret-position="262">
+              <caret line="51" column="65" lean-forward="true" selection-start-line="51" selection-start-column="65" selection-end-line="51" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,7 +155,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539253230669" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539253757760" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -235,7 +213,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21060605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -409,8 +386,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EvolutionAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="53" column="60" lean-forward="true" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
+        <state relative-caret-position="262">
+          <caret line="51" column="65" lean-forward="true" selection-start-line="51" selection-start-column="65" selection-end-line="51" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
