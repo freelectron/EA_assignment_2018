@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class Recombinator {
@@ -71,34 +72,46 @@ public class Recombinator {
 
     public Mutant differentialMutation(Population population, double F, int locationX){
 //        Mutant mutant1 ;Mutant mutant2, Mutant mutant3
-        Random r = new Random() ;
-        int[] arr = new int[3] ;
-        boolean shitTest ;
+
+        boolean outside;
+        Mutant mutantY = new Mutant(Var.NUMBER_OF_GENES);
+
         do {
-            for (int i = 0; i < 3; i++) {
-                double x = r.nextDouble();
-                double  num = Math.floor(x * Var.POPULATION_SIZE);
-                arr[i] = (int) num;
-            }
-            shitTest = false;
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < i; j++) {
-                    if (arr[i] == arr[j]) {
+            outside = false;
+            Random r = new Random();
+            int[] arr = new int[3];
+            boolean shitTest;
+            do {
+                for (int i = 0; i < 3; i++) {
+                    double x = r.nextDouble();
+                    double num = Math.floor(x * Var.POPULATION_SIZE);
+                    arr[i] = (int) num;
+                }
+                shitTest = false;
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < i; j++) {
+                        if (arr[i] == arr[j]) {
+                            shitTest = true;
+                        }
+                    }
+                    if (arr[i] == locationX) {
                         shitTest = true;
                     }
                 }
-                if(arr[i]==locationX ){
-                    shitTest = true ;
+            } while (shitTest == true);
+
+            Mutant mutant1 = population.getMutants()[arr[0]];
+            Mutant mutant2 = population.getMutants()[arr[1]];
+            Mutant mutant3 = population.getMutants()[arr[2]];
+            for (int i = 0; i < Var.NUMBER_OF_GENES; i++) {
+                mutantY.getValues()[i] = mutant1.getValues()[i] + F * (mutant2.getValues()[i] - mutant3.getValues()[i]);
+                if (Math.abs(mutantY.getValues()[i]) > 5) {
+                    outside = true;
                 }
+
             }
-        } while (shitTest == true) ;
-        Mutant mutant1 = population.getMutants()[arr[0]] ;
-        Mutant mutant2 = population.getMutants()[arr[1]] ;
-        Mutant mutant3 = population.getMutants()[arr[2]] ;
-        Mutant mutantY = new Mutant(Var.NUMBER_OF_GENES);
-        for (int i = 0; i < Var.NUMBER_OF_GENES; i++) {
-            mutantY.getValues()[i] = mutant1.getValues()[i] + F * (mutant2.getValues()[i] - mutant3.getValues()[i]);
-        }
+        } while (outside == true);
+
         return mutantY;
     }
     public Mutant differentialCrossover(Mutant mutant1, Mutant mutant2, double p){
@@ -118,7 +131,7 @@ public class Recombinator {
     public Population differentialSelection(Population populationZ, Population populationX){
         Population populationNew = new Population(Var.POPULATION_SIZE);
         for (int i=0; i< Var.POPULATION_SIZE; i++){
-            if (populationX.getMutants()[i].getFitness()>populationZ.getMutants()[i].getFitness()){
+            if (populationX.getMutants()[i].getFitness() > populationZ.getMutants()[i].getFitness()){
                 populationNew.getMutants()[i].setMutant( populationX.getMutants()[i] ) ;
             } else {
                 populationNew.getMutants()[i].setMutant( populationZ.getMutants()[i] ) ;

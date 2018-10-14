@@ -1,28 +1,15 @@
-//import org.vu.contest.ContestSubmission;
-//import org.vu.contest.ContestEvaluation;
-
-import java.util.Properties;
 import java.util.Random;
 
 public class Mutant {
 
     private double fitness;
-
     private double[] genes;
-
-    private double[] standard_deviations;
-
-    private double[][] correlations;
-
-    /*
-    initializing genes array
-     */
-
+    private double CR;
+    private double F;
+    
 
     public Mutant(int length) {
         genes = new double[length];
-        standard_deviations = new double[length];
-        correlations = new double[length][length];
         this.initialize();
     }
     /*
@@ -30,52 +17,50 @@ public class Mutant {
      */
 
     public void initialize() {
+        Random r = new Random();
         for (int i = 0; i < genes.length; i++) {
             genes[i] = (Math.random() * (Var.SEARCH_SPACE_MAX - Var.SEARCH_SPACE_MIN)) - Var.SEARCH_SPACE_MAX;
-            standard_deviations[i] = 0;
-            for (int j=0; j <genes.length; j++){
-                correlations[i][j] = 0;
-            }
         }
+        this.CR = 0.5;
+        this.F = Var.F;
     }
     /*
     get statements
      */
-    public double[] getValues() {
+    public double[] getGenes() {
         return genes;
     }
-
     public double getFitness() {
         return fitness;
     }
 
-    public double[] getSDs() {
-        return standard_deviations;
+    public double getCR(){
+        return CR;
     }
 
-    public double[][] getCorrelations() { return correlations; }
+    public double getF(){
+        return F;
+    }
 
-
-    /*
-    set statements
-     */
     public void setFitness(double fitness) {
         this.fitness = fitness;
     }
 
-    public void setValues(double[] genes){
-        this.genes = genes;
+    public void setCR(double CR) {
+        this.CR = CR;
     }
 
-    public void setSDs(double[] SDs){
-        standard_deviations = SDs;
+    public void setF(double F) {
+        this.F = F;
     }
 
     public void setMutant(Mutant mutant){
         for (int j = 0; j<Var.NUMBER_OF_GENES; j++) {
-            this.genes[j] = mutant.getValues()[j];
-            this.standard_deviations[j] = mutant.getSDs()[j];
+            this.genes[j] = mutant.getGenes()[j];
         }
+        this.fitness = mutant.getFitness();
+        this.CR = mutant.getCR();
+        this.F = mutant.getF();
     }
 
     /* WE LOVE MUTANTS, not vectors! */

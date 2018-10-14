@@ -58,13 +58,29 @@ public class group62 implements ContestSubmission
         // Initialize generitcAlgorithm
         EvolutionAlgorithm evolutionAlgorithm = new EvolutionAlgorithm(population);
 
-        // Initialize storage
-        MutantStorage mutantStorage = new MutantStorage(evaluations_limit_);
+        // Calculate fitness of current generation
+        for (int i = 0; i < Var.POPULATION_SIZE; i++) {
+            if (evals < evaluations_limit_) {
+                // Select parents
+                // Apply crossover / mutation operators
+                // Check fitness of unknown fuction
+
+                Mutant tempMutant = evolutionAlgorithm.population.getMutants()[i];
+                Double fitness = (double) evaluation_.evaluate(tempMutant.getValues());
+                tempMutant.setFitness(fitness) ;
+//                    System.out.println(Arrays.toString(tempMutant.getValues())) ;  /////////
+//                    System.out.println(evals);                                    ///////
+
+                evals++;
+                // Select survivors
+            }
+        }
 
         // Run code until we run out of evalutions
         while(evals < evaluations_limit_) {
 
-            evolutionAlgorithm.evolve_before();;
+            evolutionAlgorithm.evolveBefore();
+
             // Calculate fitness of current generation
             for (int i = 0; i < Var.POPULATION_SIZE; i++) {
                 if (evals < evaluations_limit_) {
@@ -75,7 +91,6 @@ public class group62 implements ContestSubmission
                     Mutant tempMutant = evolutionAlgorithm.populationBefore.getMutants()[i];
                     Double fitness = (double) evaluation_.evaluate(tempMutant.getValues());
                     tempMutant.setFitness(fitness) ;
-                    mutantStorage.store(tempMutant);
 //                    System.out.println(Arrays.toString(tempMutant.getValues())) ;  /////////
 //                    System.out.println(evals);                                    ///////
 
@@ -88,9 +103,8 @@ public class group62 implements ContestSubmission
             // Evolving current population
             evolutionAlgorithm.evolveAfter();
 
-//            if (evals >=19){
-//                break ;                        ////////////////////////
-//            }
+            evolutionAlgorithm.population.sortByFitness();
+            System.out.println(evolutionAlgorithm.population.getMutants()[0].getFitness());
         }
 
 	}

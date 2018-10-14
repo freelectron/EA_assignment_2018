@@ -7,58 +7,74 @@ public class EvolutionAlgorithm {
 
     public Population population;
     public Population populationBefore;
-
-    public Mutator mutator;
-    public Selector selector;
-    public Recombinator recombinator;
-
+    public DE dE;
 
 
     public EvolutionAlgorithm(Population population){
 
         this.population = population;
-        this.mutator = new Mutator();
-        this.selector = new Selector();
-        this.recombinator = new Recombinator();
+        this.dE = new DE();
     }
 
-    public void evolve() {
+    public void evolveBefore() {
 
-        // Start with PARENT SELECTION
-//        selector.parentSelection_elitism(population, 20);
-//        selector.parentSelection_nr1only(population);
-//        selector.parentSelection_rankBased_LR(population,2,10);
-
-
-        // Continue with RECOMBINATION
-        recombinator.crossoverPopulation_nPoint(population, 5);
-
-        // Finish with MUTATION
-//        mutator.mutatePopulation_UMN(population);
-        mutator.mutatePopulation_CMN(population);
-//        mutatePopulation_stupid();
-
-    }
-    public void evolve_before() {
+        population.sortByFitness();
 
         Population populationNew = new Population(Var.POPULATION_SIZE) ;
         for (int i = 0; i<Var.POPULATION_SIZE; i++){
-            Mutant tempMutant = new Mutant(Var.NUMBER_OF_GENES) ;
-            tempMutant = recombinator.differentialMutation(population, 0.5, i) ;
-            populationNew.getMutants()[i].setMutant(tempMutant) ;
+
+            double usedF = dE.mutateF(population.getMutants()[i].getF());
+            Mutant tempMutant = dE.differentialMutation(population, usedF, i) ;
+            tempMutant.setF(usedF);
+
+            populationNew.getMutants()[i].setMutant(tempMutant);
         }
+
         Population populationNewNew = new Population(Var.POPULATION_SIZE) ;
         for (int i = 0; i<Var.POPULATION_SIZE; i++){
-            Mutant tempMutant = new Mutant(Var.NUMBER_OF_GENES) ;
-            tempMutant = recombinator.differentialCrossover(populationNew.getMutants()[i], population.getMutants()[i], 0.5);
-            populationNewNew.getMutants()[i].setMutant(teit utant);
+
+            double usedCR = dE.mutateCR( population.getMutants()[i].getCR() );
+            Mutant tempMutant = dE.differentialCrossover(population.getMutants()[i], populationNew.getMutants()[i], usedCR);
+            tempMutant.setCR(usedCR);
+            tempMutant.setF(populationNew.getMutants()[i].getF());
+
+            populationNewNew.getMutants()[i].setMutant(tempMutant);
         }
+
+        this.populationBefore = populationNewNew ;
+    }
+
+    public void evolveBeforeCurrentToBest() {
+
+        population.sortByFitness();
+
+        Population populationNew = new Population(Var.POPULATION_SIZE) ;
+        for (int i = 0; i<Var.POPULATION_SIZE; i++){
+
+            double usedF = dE.mutateF(population.getMutants()[i].getF());
+            Mutant tempMutant = dE.differentialMutationCurrentToBest(population, usedF, i) ;
+            tempMutant.setF(usedF);
+
+            populationNew.getMutants()[i].setMutant(tempMutant);
+        }
+
+        Population populationNewNew = new Population(Var.POPULATION_SIZE) ;
+        for (int i = 0; i<Var.POPULATION_SIZE; i++){
+
+            double usedCR = dE.mutateCR( population.getMutants()[i].getCR() );
+            Mutant tempMutant = dE.differentialCrossover(population.getMutants()[i], populationNew.getMutants()[i], usedCR);
+            tempMutant.setCR(usedCR);
+            tempMutant.setF(populationNew.getMutants()[i].getF());
+
+            populationNewNew.getMutants()[i].setMutant(tempMutant);
+        }
+
         this.populationBefore = populationNewNew ;
     }
 
     public void evolveAfter() {
-//        Population populationAfter = new Population(Var.POPULATION_SIZE) ;
-        population = recombinator.differentialSelection(populationBefore,population);
-
+        this.population = dE.differentialSelectionCR5(populationBefore,population);
+        this.population = dE.replaceShitty(population, Var.KILL);
+        this.population = dE.replaceBest(population, Var.KILL_BEST);
     }
 }

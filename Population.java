@@ -31,5 +31,17 @@ public class Population {
         });
     }
 
+    public void setCR(double newCR) {
+        for (int i = 0; i < mutants.length; i++) {
+            mutants[i].setCR(newCR);
+        }
+    }
+
+    public void setF(double newF) {
+        for (int i = 0; i < mutants.length; i++) {
+            mutants[i].setF(newF);
+        }
+    }
+
 
 }
