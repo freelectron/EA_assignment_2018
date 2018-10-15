@@ -14,7 +14,7 @@ public class Var {
 
 
     public Var() {
-        POPULATION_SIZE = 50;
+        POPULATION_SIZE = 100;
         F = 0.5;
         CR = 0.5;
 //        SEARCH_SPACE_MIN = -5.0;

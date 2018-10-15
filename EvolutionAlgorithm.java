@@ -75,7 +75,7 @@ public class EvolutionAlgorithm {
     }
 
     public void evolveAfter() {
-        this.population = dE.differentialSelectionCR5(populationBefore,population);
+        this.population = dE.differentialSelectionCR5(populationBefore, population);
         this.population = dE.replaceShitty(population, Var.KILL);
         this.population = dE.replaceBest(population, Var.KILL_BEST);
     }

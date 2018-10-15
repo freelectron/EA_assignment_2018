@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd734ee8-c631-48b0-832c-5bcb5d91c000" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Evaluate.class" beforeDir="false" afterPath="$PROJECT_DIR$/Evaluate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Evaluate.java" beforeDir="false" afterPath="$PROJECT_DIR$/Evaluate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Var.class" beforeDir="false" afterPath="$PROJECT_DIR$/Var.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Var.java" beforeDir="false" afterPath="$PROJECT_DIR$/Var.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,11 +15,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tuning_Eli.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="14" column="52" lean-forward="true" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tuning.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Evaluate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+            <state relative-caret-position="285">
+              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,76 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Benchmark/F01_shifted_sphere.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SphEva.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-38">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Benchmark/benchmark.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="77" column="43" lean-forward="true" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5210#5211#0" expanded="true" />
-                <element signature="e#5227#5228#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Benchmark/test_func.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Benchmark/README.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="63" column="35" selection-start-line="63" selection-end-line="63" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Var.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-              <folding>
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
-                <element signature="e#529#530#0" expanded="true" />
-                <element signature="e#566#567#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
-                <element signature="e#659#660#0" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-                <element signature="e#836#837#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -189,11 +140,6 @@
               <item name="assingmentfiles_2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="assingmentfiles_2018" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="assingmentfiles_2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assingmentfiles_2018" type="462c0819:PsiDirectoryNode" />
-              <item name="Benchmark" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -202,7 +148,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539598326047" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539600342624" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -300,7 +246,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.71163166" weight="0.1525974" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.71163166" weight="0.1514658" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.28836834" side_tool="true" weight="0.5620438" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49919224" weight="0.32846716" />
@@ -451,9 +397,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tuning.java" />
     <entry file="file://$PROJECT_DIR$/BenEva.java" />
-    <entry file="file://$PROJECT_DIR$/Tuning_Eli.java" />
     <entry file="file://$PROJECT_DIR$/runTuning.sh" />
     <entry file="file://$PROJECT_DIR$/buildTuning.sh" />
     <entry file="file://$PROJECT_DIR$/KatEva.java" />
@@ -489,6 +433,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Benchmark/F01_shifted_sphere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Benchmark/benchmark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5210#5211#0" expanded="true" />
+            <element signature="e#5227#5228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Benchmark/test_func.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -506,51 +469,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Benchmark/benchmark.java">
+    <entry file="file://$PROJECT_DIR$/Tuning_Eli.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="77" column="43" lean-forward="true" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5210#5211#0" expanded="true" />
-            <element signature="e#5227#5228#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="14" column="52" lean-forward="true" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Benchmark/F01_shifted_sphere.java">
+    <entry file="file://$PROJECT_DIR$/Tuning.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Var.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Evaluate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+        <state relative-caret-position="285">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Var.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
         </state>
       </provider>
     </entry>
