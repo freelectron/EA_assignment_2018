@@ -19,8 +19,8 @@ public class Var {
         CR = 0.5;
 //        SEARCH_SPACE_MIN = -5.0;
 //        SEARCH_SPACE_MAX = 5.0;
-        SEARCH_SPACE_MIN = -100.0;
-        SEARCH_SPACE_MAX = 100.0;
+        SEARCH_SPACE_MIN = -100;
+        SEARCH_SPACE_MAX = 100;
 
 
     }

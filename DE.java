@@ -43,7 +43,7 @@ public class DE {
             Mutant mutant3 = population.getMutants()[arr[2]];
             for (int i = 0; i < Var.NUMBER_OF_GENES; i++) {
                 mutantY.getGenes()[i] = mutant1.getGenes()[i] + F * (mutant2.getGenes()[i] - mutant3.getGenes()[i]);
-                if (Math.abs(mutantY.getGenes()[i]) > 5) {
+                if (Math.abs(mutantY.getGenes()[i]) > Var.SEARCH_SPACE_MAX) {
                     outside = true;
                 }
 
@@ -89,7 +89,7 @@ public class DE {
             for (int i = 0; i < Var.NUMBER_OF_GENES; i++) {
                 mutantY.getGenes()[i] = mutant1.getGenes()[i] + Var.F1 * (mutantBest.getGenes()[i] - mutant1.getGenes()[1])
                         + Var.F2 * (mutant2.getGenes()[i] - mutant3.getGenes()[i]);
-                if (Math.abs(mutantY.getGenes()[i]) > 5) {
+                if (Math.abs(mutantY.getGenes()[i]) > Var.SEARCH_SPACE_MAX) {
                     outside = true;
                 }
 

@@ -42,7 +42,7 @@ public class Evaluate
 //        Properties props = evaluation_.getProperties();
 //        // Get evaluation limit
 //        int evaluations_limit_ = Integer.parseInt(props.getProperty("Evaluations"));     // ! //
-        int evaluations_limit_ = 100 ;
+        int evaluations_limit_ = 10000 ;
 //        // Property keys depend on specific evaluation
 //        // E.g. double param = Double.parseDouble(props.getProperty("property_name"));
 //        boolean isMultimodal = Boolean.parseBoolean(props.getProperty("Multimodal"));
