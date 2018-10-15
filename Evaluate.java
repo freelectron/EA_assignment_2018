@@ -25,6 +25,8 @@ public class Evaluate
         // ------------------------------------------------------------------------------------------
 
         SphEva evaluation_ = new SphEva();
+        benchmark theBenchmark = new benchmark();
+        test_func aTestFunc = theBenchmark.testFunctionFactory(3, 50);
         // BenEva evaluation_ = new BenEva();
         // SchEva evaluation_ = new SchEva();
         // KatEva evaluation_ = new KatEva();
