@@ -17,6 +17,8 @@ public class Var {
         POPULATION_SIZE = 50;
         F = 0.5;
         CR = 0.5;
+        SEARCH_SPACE_MIN = -5.0;
+        SEARCH_SPACE_MAX = 5.0;
     }
 
     public void setPopulationSize (int populationSize) {
@@ -31,6 +33,14 @@ public class Var {
         this.CR = CR;
     }
 
+    public void setSEARCH_SPACE_MIN (double SEARCH_SPACE_MIN) {
+        this.SEARCH_SPACE_MIN = SEARCH_SPACE_MIN;
+    }
+
+    public void setSEARCH_SPACE_MAX (double SEARCH_SPACE_MAX) {
+        this.SEARCH_SPACE_MAX = SEARCH_SPACE_MAX;
+    }
+
     public static final double SIGMA_CR = 0.1;
     public static final double SIGMA_F = 0.1;
     public static final int KILL = 0;
@@ -42,8 +52,8 @@ public class Var {
 
     // Assignment specifics
     public static final int NUMBER_OF_GENES = 10;
-    public static final int SEARCH_SPACE_MIN = -5;
-    public static final int SEARCH_SPACE_MAX = 5;
+    public static double SEARCH_SPACE_MIN;
+    public static double SEARCH_SPACE_MAX;
 
 
 

@@ -9,10 +9,12 @@ public class Evaluate
         var = new Var();
     }
 
-    public void setParamters (int populationSize, double F, double CR) {
+    public void setParamters (int populationSize, double F, double CR, double SEARCH_SPACE_MIN, double SEARCH_SPACE_MAX) {
         var.setPopulationSize(populationSize);
         var.setF(F);
         var.setCR(CR);
+        var.setSEARCH_SPACE_MIN(SEARCH_SPACE_MIN);
+        var.setSEARCH_SPACE_MAX(SEARCH_SPACE_MAX);
     }
 
     public double evaluate()
