@@ -22,8 +22,9 @@ public class Evaluate
 
         // ------------------------------------------------------------------------------------------
 
+        SphEva evaluation_ = new SphEva();
         // BenEva evaluation_ = new BenEva();
-        SchEva evaluation_ = new SchEva();
+        // SchEva evaluation_ = new SchEva();
         // KatEva evaluation_ = new KatEva();
 
         // ------------------------------------------------------------------------------------------

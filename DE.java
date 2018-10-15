@@ -172,7 +172,7 @@ public class DE {
             } else {
                 populationNew.getMutants()[i].setMutant(populationZ.getMutants()[i]);
                 double fitnessGain = (populationZ.getMutants()[i].getFitness() - populationOld.getMutants()[i].getFitness());
-                totalCR += populationZ.getMutants()[i].getCR();
+                totalCR += populationZ.getMutants()[i].getCR() * fitnessGain;
                 totalF += populationZ.getMutants()[i].getF();
                 nrImproved += 1;
                 weight += fitnessGain;
@@ -183,7 +183,7 @@ public class DE {
         double newF;
         if (times == 5) {
             if (nrImproved > 0 && weight != 0) {
-                newCR = totalCR / nrImproved;
+                newCR = totalCR / weight;
                 newF = totalF / nrImproved;
             } else {
                 newCR = populationOld.getMutants()[0].getCR();
@@ -248,5 +248,15 @@ public class DE {
             population.getMutants()[r.nextInt(top)].setMutant(tempMutant);
         }
         return population;
+    }
+
+
+    public double randomF() {
+        Random r = new Random();
+        double F;
+        do {
+            F = 0.5 + 0.3*r.nextGaussian();
+        } while (F < 0 || F > 2);
+        return F;
     }
 }

@@ -21,7 +21,7 @@ public class Mutant {
         for (int i = 0; i < genes.length; i++) {
             genes[i] = (Math.random() * (Var.SEARCH_SPACE_MAX - Var.SEARCH_SPACE_MIN)) - Var.SEARCH_SPACE_MAX;
         }
-        this.CR = 0.5;
+        this.CR = Var.CR;
         this.F = Var.F;
     }
     /*

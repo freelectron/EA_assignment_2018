@@ -52,6 +52,8 @@ public class EvolutionAlgorithm {
         for (int i = 0; i<Var.POPULATION_SIZE; i++){
 
             double usedF = dE.mutateF(population.getMutants()[i].getF());
+
+            // double usedF = dE.randomF();
             Mutant tempMutant = dE.differentialMutationCurrentToBest(population, usedF, i) ;
             tempMutant.setF(usedF);
 

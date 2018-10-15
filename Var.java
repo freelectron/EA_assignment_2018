@@ -14,7 +14,7 @@ public class Var {
 
 
     public Var() {
-        POPULATION_SIZE = 200;
+        POPULATION_SIZE = 50;
         F = 0.5;
         CR = 0.5;
     }
