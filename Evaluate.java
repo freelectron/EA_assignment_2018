@@ -1,5 +1,7 @@
+import java.io.FileNotFoundException;
 import java.util.Properties;
 import java.util.Random;
+import java.io.PrintWriter;
 
 public class Evaluate
 {
@@ -17,7 +19,7 @@ public class Evaluate
         var.setSEARCH_SPACE_MAX(SEARCH_SPACE_MAX);
     }
 
-    public double evaluate()
+    public double evaluate(PrintWriter printer)
     {
         double maxFitness = 0;
         // ------------------------------------------------------------------------------------------
@@ -56,8 +58,23 @@ public class Evaluate
         // ------------------------------------------------------------------------------------------
         // ------------------------------------------------------------------------------------------
         // ------------------------------------------------------------------------------------------
-        // BELOW HERE IS THE CODE FROM OUR ALGORITHM
+        // ------------------------------------------------------------------------------------------
+        // SET PARAMATERS
+        int nRuns = 10;
+        String runfile = "runTuning.sh";
+        String filename = "output.txt";
 
+
+
+        printer.println("HERE YOU CAN PRINT EXTRA INFORMATION ABOUT THIS RUN!" );
+        printer.println("VARIABLES THAT YOU CHOOSE, WHATEVER YOU WANT" );
+        printer.println(":) :) :) :) :)\n" );
+
+
+
+
+
+        // BELOW HERE IS THE CODE FROM OUR ALGORITHM
         int evals = 0;
 
         // Initializing population
@@ -74,6 +91,9 @@ public class Evaluate
                 double fitness = aTestFunc.f(tempMutant.getGenes());
 //                Double fitness = (double) evaluation_.evaluate(tempMutant.getGenes());
                 tempMutant.setFitness(fitness);
+
+
+                // ------------------------------------------------------------------------------------------
 
                 evals++;
                 // Select survivors
@@ -108,7 +128,7 @@ public class Evaluate
             if (evolutionAlgorithm.population.getMutants()[0].getFitness() > maxFitness) {
                 maxFitness = evolutionAlgorithm.population.getMutants()[0].getFitness();
             }
-            System.out.println("eval: " + evals + ", " + currentF + ", " + currentCR + ", " + maxFitness );
+            printer.println("eval: " + evals + ", " + currentCR + ", " + maxFitness );
         }
         return maxFitness;
     }

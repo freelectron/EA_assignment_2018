@@ -19,10 +19,8 @@ public class Var {
         CR = 0.5;
 //        SEARCH_SPACE_MIN = -5.0;
 //        SEARCH_SPACE_MAX = 5.0;
-        SEARCH_SPACE_MIN = -100.0;
-        SEARCH_SPACE_MAX = 100.0;
-
-
+        SEARCH_SPACE_MIN = -100;
+        SEARCH_SPACE_MAX = 100 ;
     }
 
     public void setPopulationSize (int populationSize) {
@@ -62,7 +60,7 @@ public class Var {
 
 
 
-    public static final double MUTATION_RATE = 0.25;
+    public static final double MUTATION_RAE = 0.25;
 
     public static final double TAU_1 = 1 / Math.sqrt(2 * NUMBER_OF_GENES);
     public static final double TAU_2 = 1 / Math.sqrt(2 * Math.sqrt(NUMBER_OF_GENES));
