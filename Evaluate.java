@@ -24,38 +24,37 @@ public class Evaluate
 
         // ------------------------------------------------------------------------------------------
 
-        SphEva evaluation_ = new SphEva();
+//        SphEva evaluation_ = new SphEva();
         benchmark theBenchmark = new benchmark();
-        test_func aTestFunc = theBenchmark.testFunctionFactory(3, 50);
+        test_func aTestFunc = theBenchmark.testFunctionFactory(1, 10);
         // BenEva evaluation_ = new BenEva();
         // SchEva evaluation_ = new SchEva();
         // KatEva evaluation_ = new KatEva();
 
         // ------------------------------------------------------------------------------------------
-
-        Random rnd_ = new Random();
-        long seed = rnd_.nextLong();
-        // System.out.println(seed);
-
-        rnd_.setSeed(seed);
-
-        // Get evaluation properties
-        Properties props = evaluation_.getProperties();
-        // Get evaluation limit
-        int evaluations_limit_ = Integer.parseInt(props.getProperty("Evaluations"));
-        // Property keys depend on specific evaluation
-        // E.g. double param = Double.parseDouble(props.getProperty("property_name"));
-        boolean isMultimodal = Boolean.parseBoolean(props.getProperty("Multimodal"));
-        boolean hasStructure = Boolean.parseBoolean(props.getProperty("Regular"));
-        boolean isSeparable = Boolean.parseBoolean(props.getProperty("Separable"));
-
-        // Do sth with property values, e.g. specify relevant settings of your algorithm
-        if(isMultimodal){
-            // Do sth
-        }else{
-            // Do sth else
-        }
-
+//        Random rnd_ = new Random();
+//        long seed = rnd_.nextLong();
+//        // System.out.println(seed);
+//
+//        rnd_.setSeed(seed);
+//
+//        // Get evaluation properties
+//        Properties props = evaluation_.getProperties();
+//        // Get evaluation limit
+//        int evaluations_limit_ = Integer.parseInt(props.getProperty("Evaluations"));     // ! //
+        int evaluations_limit_ = 100 ;
+//        // Property keys depend on specific evaluation
+//        // E.g. double param = Double.parseDouble(props.getProperty("property_name"));
+//        boolean isMultimodal = Boolean.parseBoolean(props.getProperty("Multimodal"));
+//        boolean hasStructure = Boolean.parseBoolean(props.getProperty("Regular"));
+//        boolean isSeparable = Boolean.parseBoolean(props.getProperty("Separable"));
+//
+//        // Do sth with property values, e.g. specify relevant settings of your algorithm
+//        if(isMultimodal){
+//            // Do sth
+//        }else{
+//            // Do sth else
+//        }
         // ------------------------------------------------------------------------------------------
         // ------------------------------------------------------------------------------------------
         // ------------------------------------------------------------------------------------------
@@ -74,7 +73,8 @@ public class Evaluate
             if (evals < evaluations_limit_) {
 
                 Mutant tempMutant = evolutionAlgorithm.population.getMutants()[i];
-                Double fitness = (double) evaluation_.evaluate(tempMutant.getGenes());
+                double fitness = aTestFunc.f(tempMutant.getGenes());
+//                Double fitness = (double) evaluation_.evaluate(tempMutant.getGenes());
                 tempMutant.setFitness(fitness);
 
                 evals++;
@@ -92,7 +92,8 @@ public class Evaluate
                 if (evals < evaluations_limit_) {
 
                     Mutant tempMutant = evolutionAlgorithm.populationBefore.getMutants()[i];
-                    Double fitness = (double) evaluation_.evaluate(tempMutant.getGenes());
+//                    Double fitness = (double) evaluation_.evaluate(tempMutant.getGenes());
+                    double fitness = aTestFunc.f(tempMutant.getGenes());
                     tempMutant.setFitness(fitness);
                     evals++;
                     // Select survivors

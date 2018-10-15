@@ -17,8 +17,12 @@ public class Var {
         POPULATION_SIZE = 50;
         F = 0.5;
         CR = 0.5;
-        SEARCH_SPACE_MIN = -5.0;
-        SEARCH_SPACE_MAX = 5.0;
+//        SEARCH_SPACE_MIN = -5.0;
+//        SEARCH_SPACE_MAX = 5.0;
+        SEARCH_SPACE_MIN = -100.0;
+        SEARCH_SPACE_MAX = 100.0;
+
+
     }
 
     public void setPopulationSize (int populationSize) {
